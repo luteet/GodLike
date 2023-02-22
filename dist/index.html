@@ -11,19 +11,14 @@
 	<div class="wrapper _grid _large-container">
 		<div class="page-bg" style="background-image: url(https://godlike.host/wp-content/uploads/2022/08/Group-20693.png)"></div>
 		<header class="header">
-			<a href="index.html" class="header__logo">
+			<a href="index.html" class="header__logo"  data-aos="fade-in" data-aos-delay="100">
 				<img src="img/logo.svg" alt="Logo" width="150" height="51" loading="lazy" class="header__logo--img">
 			</a>
-			<nav class="header__nav">
+			<nav class="header__nav" data-aos="fade-in" data-aos-delay="100">
 				<ul class="header__nav--list">
 					<li>
 						<a href="#">
 							Minecraft
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							GTA
 						</a>
 					</li>
 					<li>
@@ -49,7 +44,7 @@
 						</svg>
 					</div>
 					<ul class="header__select--list select-list">
-						<li>
+						<li style="display: none;">
 							<a href="#" class="header__nav--link">
 								<svg width="18" height="18" viewBox="0 0 18 18">
 									<use xlink:href="img/sprites.svg#discord"></use>
@@ -62,7 +57,7 @@
 								<svg width="24" height="24" viewBox="0 0 24 24">
 									<use xlink:href="img/sprites.svg#game-controller"></use>
 								</svg>
-								Гейм панель
+								Ігрова панель
 							</a>
 						</li>
 						<li>
@@ -180,6 +175,12 @@
 						</li>
 						<li>
 							<a href="#">
+								<img src="img/header/menu-9.svg" width="24" height="24" alt="">
+								<span>Блог</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
 								<img src="img/header/menu-6.svg" width="24" height="24" alt="">
 								<span>Про нас</span>
 							</a>
@@ -188,6 +189,12 @@
 							<a href="#">
 								<img src="img/header/menu-8.svg" width="24" height="24" alt="">
 								<span>Про панель</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/header/menu-10.svg" width="24" height="24" alt="">
+								<span>Центр допомоги</span>
 							</a>
 						</li>
 					</ul>
@@ -250,7 +257,7 @@
 		</header>
 
 		<nav class="games-nav" data-sticky-container>
-			<div class="games-nav__sticky-container sticky">
+			<div class="games-nav__sticky-container sticky"  data-aos="fade-right" data-aos-delay="200">
 				<div class="games-nav__wrapper">
 					<div class="games-nav__block">
 						<form action="#" class="games-nav__search">
@@ -402,7 +409,7 @@
 			</div>
 		</nav>
 		<main class="main">
-			<div class="page-address">
+			<div class="page-address" data-aos="fade-in" data-aos-delay="400">
 				<ul>
 					<li>
 						<a href="#">
@@ -422,12 +429,12 @@
 				</ul>
 			</div>
 			<nav class="games-nav-mob"></nav>
-			<section class="blog-list">
+			<section class="blog-list" data-aos="fade-in" data-aos-delay="600">
 				<h2 class="blog-list__title section-title">
 					Блог
 				</h2>
 				<ul class="blog-list__wrapper">
-					<li class="blog-list__item">
+					<li class="blog-list__item" data-aos="fade-in">
 	<div class="blog-list__item--body">
 		<a href="#" class="blog-list__item--image" title="Barotrauma - Исследуйте загадочный мир">
 			<picture>
@@ -468,7 +475,7 @@
 			</div>
 		</a>
 	</div>
-</li><li class="blog-list__item">
+</li><li class="blog-list__item" data-aos="fade-in">
 	<div class="blog-list__item--body">
 		<a href="#" class="blog-list__item--image" title="Barotrauma - Исследуйте загадочный мир">
 			<picture>
@@ -509,7 +516,7 @@
 			</div>
 		</a>
 	</div>
-</li><li class="blog-list__item">
+</li><li class="blog-list__item" data-aos="fade-in">
 	<div class="blog-list__item--body">
 		<a href="#" class="blog-list__item--image" title="Barotrauma - Исследуйте загадочный мир">
 			<picture>
@@ -550,7 +557,7 @@
 			</div>
 		</a>
 	</div>
-</li><li class="blog-list__item">
+</li><li class="blog-list__item" data-aos="fade-in">
 	<div class="blog-list__item--body">
 		<a href="#" class="blog-list__item--image" title="Barotrauma - Исследуйте загадочный мир">
 			<picture>
@@ -591,7 +598,7 @@
 			</div>
 		</a>
 	</div>
-</li><li class="blog-list__item">
+</li><li class="blog-list__item" data-aos="fade-in">
 	<div class="blog-list__item--body">
 		<a href="#" class="blog-list__item--image" title="Barotrauma - Исследуйте загадочный мир">
 			<picture>
@@ -632,7 +639,7 @@
 			</div>
 		</a>
 	</div>
-</li><li class="blog-list__item">
+</li><li class="blog-list__item" data-aos="fade-in">
 	<div class="blog-list__item--body">
 		<a href="#" class="blog-list__item--image" title="Barotrauma - Исследуйте загадочный мир">
 			<picture>
@@ -675,7 +682,7 @@
 	</div>
 </li>
 				</ul>
-				<div class="blog-list__footer">
+				<div class="blog-list__footer" data-aos="fade-in">
 					<div class="blog-list__pagination pagination">
     <a href="#" class="pagination__arrow _prev">
         <svg width="10" height="16" viewBox="0 0 10 16">
@@ -729,10 +736,15 @@
 			</section>
 		</main>
 	
-		<footer class="footer section-container">
+		<footer class="footer section-container" data-aos="fade-in" data-aos-delay="100">
 			<nav class="footer__nav">
 				<div class="footer__nav--block">
-					<span class="title">Популярные сервера</span>
+					<div class="footer__nav--target">
+						<span class="title">Клієнтська панель</span>
+						<svg width="24" height="24" viewBox="0 0 24 24" class="drop-down-arrow">
+							<use xlink:href="img/sprites.svg#drop-down"></use>
+						</svg>
+					</div>
 					<ul>
 						<li>
 							<a href="#">
@@ -741,47 +753,62 @@
 						</li>
 						<li>
 							<a href="#">
-								Rust
+								RUST
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								Terraria
+								Counter-Strike
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								Don`t Starve Together
+								ARK
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								Team Fortress 2
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div class="footer__nav--block">
-					<span class="title">Учетная запись</span>
-					<ul>
-						<li>
-							<a href="#">
-								Биллинг
+								Unturned	
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								Игровая панель
+								Безкоштовний хостінг
 							</a>
 						</li>
 					</ul>
 				</div>
 				<div class="footer__nav--block">
-					<span class="title">Портал</span>
+					<div class="footer__nav--target">
+						<span class="title">Клієнтська панель</span>
+						<svg width="24" height="24" viewBox="0 0 24 24" class="drop-down-arrow">
+							<use xlink:href="img/sprites.svg#drop-down"></use>
+						</svg>
+					</div>
 					<ul>
 						<li>
 							<a href="#">
-								О компании
+								Біллінг
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Ігрова панель
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__nav--block">
+					<div class="footer__nav--target">
+						<span class="title">Про хостінг</span>
+						<svg width="24" height="24" viewBox="0 0 24 24" class="drop-down-arrow">
+							<use xlink:href="img/sprites.svg#drop-down"></use>
+						</svg>
+					</div>
+					<ul>
+						<li>
+							<a href="#">
+								Команда Godlike
 							</a>
 						</li>
 						<li>
@@ -796,7 +823,12 @@
 						</li>
 						<li>
 							<a href="#">
-								Вакансии
+								Вакансії
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Стан серверів
 							</a>
 						</li>
 						<li>
@@ -807,21 +839,26 @@
 					</ul>
 				</div>
 				<div class="footer__nav--block">
-					<span class="title">Служба поддержки</span>
+					<div class="footer__nav--target">
+						<span class="title">Служба підтримки</span>
+						<svg width="24" height="24" viewBox="0 0 24 24" class="drop-down-arrow">
+							<use xlink:href="img/sprites.svg#drop-down"></use>
+						</svg>
+					</div>
 					<ul>
 						<li>
 							<a href="#">
-								Присоединяйтесь к Discord
+								Долучайтесь до Discord
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								Открыть тикет
+								Cтворити тікет
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								Документация
+								Документація
 							</a>
 						</li>
 						<li>
@@ -858,15 +895,29 @@
 							</svg>
 						</a>
 					</li>
+					<li>
+						<a href="#" title="TikTok">
+							<svg width="18" height="18" viewBox="0 0 18 18">
+								<use xlink:href="img/sprites.svg#tiktok"></use>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="YouTube">
+							<svg width="18" height="18" viewBox="0 0 18 18">
+								<use xlink:href="img/sprites.svg#youtube"></use>
+							</svg>
+						</a>
+					</li>
 				</ul>
 			</div>
 			<a href="#" class="footer__logo">
-				<img src="img/logo-2.svg" width="186" height="63" loading="lazy" alt="Logo" class="footer__logo--img">
+				<img src="img/logo.svg" width="186" height="63" loading="lazy" alt="Logo" class="footer__logo--img">
 			</a>
 			<div class="footer__copy">
-				Copyright 2022 © godlike.host - Все права защищены.
+				Copyright 2023 © godlike.host - Всі права захищено.
 				<br><br>
-				<a href="#">
+				<a href="https://godlike.host/privacy-policy">
 					Политика конфиденциальности
 				</a>
 			</div>

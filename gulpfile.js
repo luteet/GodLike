@@ -54,6 +54,7 @@ function scriptsLib() {
         'node_modules/swiper/swiper-bundle.min.js', // Slider
         'node_modules/sticky-js/dist/sticky.min.js', // Slider
         'node_modules/smoothscroll-polyfill/dist/smoothscroll.min.js', // Полифил для window.scroll()
+        'node_modules/aos/dist/aos.js',
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
@@ -126,6 +127,7 @@ function stylesLib() {
     return src([
         'node_modules/normalize.css/normalize.css',
         'node_modules/swiper/swiper-bundle.min.css', // Slider
+        'node_modules/aos/dist/aos.css', // Animation
     ])
     .pipe(concat('_libs.scss'))
     .pipe(dest('app/scss'))

@@ -359,6 +359,7 @@ body {
 	background: linear-gradient(267.71deg, #007CEE -37.36%, #5F39CB 98.08%);
 	box-shadow: 0px 4px 4px rgba(9, 132, 227, 0.2);
 	border-radius: 4px;
+	font-weight: 500;
 	&::before {
 		content: '';
 		position: absolute;
@@ -375,6 +376,7 @@ body {
 
 	border-radius: 5px;
 	& svg {
+		margin-top: 2px;
 		margin-right: 10px;
 		margin-left: -12px;
 		transition: fill .2s ease-in-out;

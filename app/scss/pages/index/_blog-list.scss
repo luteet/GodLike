@@ -1,13 +1,13 @@
 .blog-list {
 
-	padding-bottom: 53px;
+	padding-bottom: 33px;
 
 	@include _768 {
-		padding-bottom: 80px;
+		padding-bottom: 60px;
 	}
 	
 	@include _992 {
-		padding-bottom: 117px;
+		padding-bottom: 80px;
 	}
 
 	// .blog-list__title

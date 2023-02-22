@@ -5,13 +5,16 @@
 		display: block;
 	}
 
-	margin: -30px 0 0 0;
+	overflow: hidden;
 
 	&__wrapper {
-		padding: 30px 0 30px 0;
 		@media (min-width: 1300px) {
-			padding: 30px 24px 30px 0;
+			padding: 0 24px 0 0;
 		}
+		min-height: 100%;
+
+		display: flex;
+		flex-direction: column;
 	}
 
 	// .aside__block
@@ -32,6 +35,14 @@
 			background: rgba(23, 24, 40, 0.68);
 			backdrop-filter: blur(4.5px);
 			border-radius: 4px;
+		}
+	}
+
+	&__sticky-container {
+		flex: 1 1 auto;
+		margin-top: -30px; padding-top: 14px;
+		& > * {
+			 padding-top: 30px;
 		}
 	}
 }

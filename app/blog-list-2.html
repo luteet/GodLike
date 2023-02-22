@@ -4,7 +4,7 @@
 })
 
 		<nav class="games-nav" data-sticky-container>
-			<div class="games-nav__sticky-container sticky">
+			<div class="games-nav__sticky-container sticky" data-aos="fade-right" data-aos-delay="200">
 				<div class="games-nav__wrapper">
 					<div class="games-nav__block">
 						<form action="#" class="games-nav__search">
@@ -111,7 +111,7 @@
 				</div>
 			</div>
 		</nav>
-		<main class="main">
+		<main class="main" data-aos="fade-in" data-aos-delay="400">
 			<div class="page-address">
 				<ul>
 					<li>
@@ -163,16 +163,16 @@
 						{},
 					])
 				</ul>
-				<div class="blog-list__footer">
+				<div class="blog-list__footer" data-aos="fade-in">
 					@@include("html/_pagination.html", {
 						"class": "blog-list__pagination ",
 					})
 				</div>
 			</section>
 		</main>
-		<aside class="aside" data-sticky-container>
-			<div class="aside__wrapper sticky">
-				<div class="aside__block">
+		<aside class="aside">
+			<div class="aside__wrapper">
+				<div class="aside__block" data-aos="fade-left" data-aos-delay="200">
 					<div class="aside__block--body">
 						<div class="resent-posts">
 							<h3 class="resent-posts__title">

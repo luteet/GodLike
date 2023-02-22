@@ -34,6 +34,11 @@
 		font-size: 1.6rem;
 		@include _768 {
 			display: inline;
+			font-size: 2rem;
+		}
+		
+		@include _992 {
+			font-size: 2.25rem;
 		}
 		background: transparent;
 		color: #C95EFE;

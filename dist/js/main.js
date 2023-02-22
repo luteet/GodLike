@@ -5,6 +5,8 @@ const
 	burger = document.querySelector('.header__burger'),
 	header = document.querySelector('.header');
 
+let windowSize = window.innerWidth;
+
 
 body.addEventListener('click', function (event) {
 
@@ -57,8 +59,8 @@ body.addEventListener('click', function (event) {
 
 	// =-=-=-=-=-=-=-=-=-=-=-=- <save anchor id in URL> -=-=-=-=-=-=-=-=-=-=-=-=
 
-	const anchorLink = $('.anchor-link'),
-	activeAnchorLink = document.querySelector('.anchor-link._active');
+	const anchorLink = $('.anchor-link')/* ,
+	activeAnchorLink = document.querySelector('.anchor-link._active') */;
 	if(anchorLink) {
 		/* if(activeAnchorLink) activeAnchorLink.classList.remove('_active')
 		anchorLink.classList.add('_active'); */
@@ -165,6 +167,35 @@ body.addEventListener('click', function (event) {
 
 	// =-=-=-=-=-=-=-=-=-=-=-=- </games nav list open> -=-=-=-=-=-=-=-=-=-=-=-=
 
+	// =-=-=-=-=-=-=-=-=-=-=-=- <footer nav block open> -=-=-=-=-=-=-=-=-=-=-=-=
+
+	const footerNavTarget = $('.footer__nav--target');
+	if(footerNavTarget && windowSize < 768) {
+
+		const block = footerNavTarget.closest('.footer__nav--block'),
+			  list = block.querySelector('ul');
+
+		if(!block.classList.contains('_animating')) {
+			
+			block.classList.toggle('_active');
+			block.classList.add('_animating');
+
+			if(block.classList.contains('_active')) {
+				slideDown(list);
+			} else {
+				slideUp(list);
+			}
+
+			setTimeout(() => {
+				block.classList.remove('_animating');
+			},500)
+		}
+		
+		
+	}
+
+	// =-=-=-=-=-=-=-=-=-=-=-=- </footer nav block open> -=-=-=-=-=-=-=-=-=-=-=-=
+
 })
 
 const stickyBlock = new Sticky('[data-sticky-container] .sticky');
@@ -172,7 +203,7 @@ const stickyBlock = new Sticky('[data-sticky-container] .sticky');
 
 // =-=-=-=-=-=-=-=-=-=-=-=- <resize> -=-=-=-=-=-=-=-=-=-=-=-=
 
-let resizeCheck = {}, windowSize;
+let resizeCheck = {};
 
 function resizeCheckFunc(size, minWidth, maxWidth) {
 	if (windowSize <= size && (resizeCheck[String(size)] == true || resizeCheck[String(size)] == undefined) && resizeCheck[String(size)] != false) {
@@ -288,7 +319,7 @@ function scroll() {
 			let findCheck = true;
 			
 			for(let index = items.length-1; index >= 0; index--) {
-				if(items[index].getBoundingClientRect().top < 0 && Math.abs(scrollAnchorContainer.getBoundingClientRect().top) < scrollAnchorContainer.offsetHeight) {
+				if(items[index].getBoundingClientRect().top < 5 && Math.abs(scrollAnchorContainer.getBoundingClientRect().top) < scrollAnchorContainer.offsetHeight) {
 					
 					const anchorLink = nav.querySelector(`.anchor-link[href="#${items[index].getAttribute('id')}"]`);
 					findCheck = false;
@@ -326,14 +357,70 @@ window.addEventListener('scroll', scroll);
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </scroll> -=-=-=-=-=-=-=-=-=-=-=-=
 
-/* 
+
 // =-=-=-=-=-=-=-=-=-=-=-=- <animation> -=-=-=-=-=-=-=-=-=-=-=-=
 
 AOS.init({
-	//disable: "mobile",
+	disable: "mobile",
+	once: true,
 });
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </animation> -=-=-=-=-=-=-=-=-=-=-=-=
 
-*/
+function slideUp (target, duration=500) {
+	target.style.transitionProperty = 'height, margin, padding';
+	target.style.transitionDuration = duration + 'ms';
+	target.style.boxSizing = 'border-box';
+	target.style.height = target.offsetHeight + 'px';
+	target.offsetHeight;
+	target.style.overflow = 'hidden';
+	target.style.height = 0;
+	target.style.paddingTop = 0;
+	target.style.paddingBottom = 0;
+	target.style.marginTop = 0;
+	target.style.marginBottom = 0;
+	window.setTimeout( () => {
+	  target.style.display = 'none';
+	  target.style.removeProperty('height');
+	  target.style.removeProperty('padding-top');
+	  target.style.removeProperty('padding-bottom');
+	  target.style.removeProperty('margin-top');
+	  target.style.removeProperty('margin-bottom');
+	  target.style.removeProperty('overflow');
+	  target.style.removeProperty('transition-duration');
+	  target.style.removeProperty('transition-property');
+	}, duration);
+  }
+
+function slideDown (target, duration=500) {
+	target.style.removeProperty('display');
+	let display = window.getComputedStyle(target).display;
+
+	if (display === 'none')
+	  display = 'block';
+
+	target.style.display = display;
+	let height = target.offsetHeight;
+	target.style.overflow = 'hidden';
+	target.style.height = 0;
+	target.style.paddingTop = 0;
+	target.style.paddingBottom = 0;
+	target.style.marginTop = 0;
+	target.style.marginBottom = 0;
+	target.offsetHeight;
+	target.style.boxSizing = 'border-box';
+	target.style.transitionProperty = "height, margin, padding";
+	target.style.transitionDuration = duration + 'ms';
+	target.style.height = height + 'px';
+	target.style.removeProperty('padding-top');
+	target.style.removeProperty('padding-bottom');
+	target.style.removeProperty('margin-top');
+	target.style.removeProperty('margin-bottom');
+	window.setTimeout( () => {
+	  target.style.removeProperty('height');
+	  target.style.removeProperty('overflow');
+	  target.style.removeProperty('transition-duration');
+	  target.style.removeProperty('transition-property');
+	}, duration);
+}
 

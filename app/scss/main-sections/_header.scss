@@ -4,6 +4,7 @@
 
 	display: flex;
 	width: 100%;
+	z-index: 100;
 
 	// .header__logo
 
@@ -53,7 +54,7 @@
 				
 				@media (min-width: 1280px) {
 					&:not(:last-child) {
-						border-right: 1px dashed #8D8FAC;
+						border-right: 1px solid rgba(141, 143, 172, 0.2);
 					}
 				}
 
@@ -127,6 +128,14 @@
 
 		&--btn {
 			margin-right: 16px;
+			font-size: 0.9375rem;
+			min-height: 48px;
+			@include _768 {
+				padding: 10px 24px;
+				&._transparent {
+					padding: 8px 24px;
+				}
+			}
 		}
 
 		// .header__nav--select
@@ -254,7 +263,7 @@
 		position: fixed;
 		right: 0; top: 0;
 		width: 100%; height: 100%;
-		backdrop-filter: blur(5px);
+		backdrop-filter: blur(20px);
 		z-index: 100;
 
 		opacity: 0; visibility: hidden;
@@ -262,7 +271,7 @@
 		display: flex;
 		justify-content: flex-end;
 
-		transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+		transition: transform 0ms ease-out 0.4s, opacity 0.4s linear, visibility .4s linear;
 		
 		&--bg {
 			position: absolute;
@@ -302,6 +311,7 @@
 			color: #fff;
 			border: 5px solid #007CEE;
 			border-radius: 24px 0 0 24px;
+			padding: 10px 0;
 			border-right: 0;
 			display: flex;
 			flex-direction: column;

@@ -107,6 +107,28 @@
 
 		color: var(--white);
 
+		&:hover &--icon {
+			background: var(--blue);
+			& svg {
+				fill: var(--dark);
+			}
+		}
+
+		&:hover &--title {
+			color: var(--blue);
+		}
+
+		&:active &--title {
+			color: var(--blue-dark);
+		}
+
+		&:active &--icon {
+			background: var(--blue-dark);
+			& svg {
+				fill: var(--dark);
+			}
+		}
+
 		// .game-server-knowledgebase__link--icon
 
 		&--icon {
@@ -116,9 +138,16 @@
 			backdrop-filter: blur(4.5px);
 			border-radius: 4px;
 
+			transition: background .2s ease-in-out;
+
 			display: flex;
 			align-items: center;
 			justify-content: center;
+
+			& svg {
+				fill: var(--blue);
+				transition: fill .2s ease-in-out;
+			}
 		}
 
 		// .game-server-knowledgebase__link--title
@@ -138,6 +167,7 @@
 				font-size: 1.25rem;
 			}
 			
+			transition: color .2s ease-in-out;
 		}
 
 		// .game-server-knowledgebase__link--text
