@@ -115,8 +115,14 @@
 	&__content {
 		padding-top: 20px;
 
+		& [id] {
+			&:hover .hash-link {
+				opacity: 1; visibility: visible;
+			}
+		}
+
 		& p {
-			padding-top: 18px;
+			margin-top: 18px;
 
 			font-size: 0.875rem;
 			@include _768 {
@@ -128,26 +134,25 @@
 			line-height: 206%;
 			letter-spacing: 0.05em;
 			color: var(--white);
-
-			
 		}
-		& a {
+		& a:not(.hash-link) {
 			border-bottom: 1px solid var(--white);
 			color: var(--white);
+			
 		}
 		& img {
 			margin-top: 22px; margin-bottom: 20px;
 			width: 100%; height: auto;
 		}
 		& h3 {
-			padding-top: 30px;
+			margin-top: 30px;
 
 			font-weight: 800;
 			
 			font-size: 1.5rem;
 			@include _768 {
 				font-size: 2rem;
-				padding-top: 49px;
+				margin-top: 49px;
 			}
 			
 			@include _992 {

@@ -45,7 +45,7 @@ body.addEventListener('click', function (event) {
 			//console.log('scroll')
 			window.scrollTo({
 				left: 0,
-				top: (section) ? section.offsetTop : 0,
+				top: (section) ? section.offsetTop + header.offsetHeight + 5 : 0,
 				behavior: 'smooth'
 			})
 		}
@@ -60,8 +60,8 @@ body.addEventListener('click', function (event) {
 	const anchorLink = $('.anchor-link'),
 	activeAnchorLink = document.querySelector('.anchor-link._active');
 	if(anchorLink) {
-		if(activeAnchorLink) activeAnchorLink.classList.remove('_active')
-		anchorLink.classList.add('_active');
+		/* if(activeAnchorLink) activeAnchorLink.classList.remove('_active')
+		anchorLink.classList.add('_active'); */
 		history.pushState('', "", anchorLink.getAttribute('href'));
 	}
 
@@ -261,6 +261,21 @@ let lastNewsSlider = new Swiper('.last-news__slider', {
 
 const scrollAnchorContainer = document.querySelectorAll('.scroll-anchor-container');
 
+scrollAnchorContainer.forEach(scrollAnchorContainer => {
+		
+	const items = scrollAnchorContainer.querySelectorAll('[id]'),
+	nav = document.querySelectorAll(scrollAnchorContainer.dataset.nav);
+
+	nav.forEach(nav => {
+		
+		items.forEach(item => {
+			item.insertAdjacentHTML("beforeend", `<a class="hash-link" href="#${item.getAttribute('id')}">#</a>`)
+		})
+
+	})
+
+})
+
 function scroll() {
 	
 	scrollAnchorContainer.forEach(scrollAnchorContainer => {
@@ -269,12 +284,14 @@ function scroll() {
 		nav = document.querySelectorAll(scrollAnchorContainer.dataset.nav);
 
 		nav.forEach(nav => {
+
+			let findCheck = true;
 			
 			for(let index = items.length-1; index >= 0; index--) {
-				//console.log(items[index])
-				if(items[index].getBoundingClientRect().top < 0) {
+				if(items[index].getBoundingClientRect().top < 0 && Math.abs(scrollAnchorContainer.getBoundingClientRect().top) < scrollAnchorContainer.offsetHeight) {
 					
 					const anchorLink = nav.querySelector(`.anchor-link[href="#${items[index].getAttribute('id')}"]`);
+					findCheck = false;
 					
 					if(anchorLink) {
 						
@@ -287,9 +304,15 @@ function scroll() {
 						} else {
 							anchorLink.classList.add('_active');
 						}
+
 					}				
 					break;	
 				}
+			}
+
+			if(findCheck) {
+				const activeLink = nav.querySelector('.anchor-link._active');
+				if(activeLink) activeLink.classList.remove('_active')
 			}
 
 		})
@@ -313,3 +336,4 @@ AOS.init({
 // =-=-=-=-=-=-=-=-=-=-=-=- </animation> -=-=-=-=-=-=-=-=-=-=-=-=
 
 */
+

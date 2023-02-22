@@ -154,13 +154,20 @@ body {
 	}
 }
 
-/* img {
-	transition: opacity .2s ease-in-out;
-	opacity: 0;
-	&.loaded {
-		opacity: 1;
+.hash-link {
+	color: var(--blue);
+	line-height: 100%;
+	border-bottom: 2px solid transparent;
+	font-size: 2rem;
+	display: inline-block;
+	margin-left: 5px;
+
+	opacity: 0; visibility: hidden;
+	transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
+	&:hover {
+		border-color: var(--blue);
 	}
-} */
+}
 
 .blog-min-info {
 	display: inline-flex;
