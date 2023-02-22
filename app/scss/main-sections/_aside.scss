@@ -1,0 +1,134 @@
+.aside {
+
+	display: none;
+	@include _992 {
+		display: block;
+	}
+
+	margin: -30px 0 0 0;
+
+	&__wrapper {
+		padding: 30px 0 30px 0;
+		@media (min-width: 1300px) {
+			padding: 30px 24px 30px 0;
+		}
+	}
+
+	// .aside__block
+
+	&__block {
+
+		&:not(:first-child) {
+			margin-top: 10px;
+		}
+
+		// .aside__block--body
+
+		&--body {
+			padding: 19px 10px;
+			@media (min-width: 1300px) {
+				padding: 19px;
+			}
+			background: rgba(23, 24, 40, 0.68);
+			backdrop-filter: blur(4.5px);
+			border-radius: 4px;
+		}
+	}
+}
+
+.resent-posts {
+
+	// .resent-posts__title
+
+	&__title {
+		font-weight: 700;
+		font-size: 1.25rem;
+		line-height: 95%;
+		color: #FFFFFF;
+
+	}
+
+	// .resent-posts__list
+
+	&__list {
+		padding-top: 15px;
+	}
+
+	// .resent-posts__item
+
+	&__item {
+		padding: 11px 0;
+		&:not(:first-child) {
+			border-top: 1px solid rgba(255, 255, 255, 0.19);;
+		}
+	}
+
+	// .resent-posts__link
+
+	&__link {
+		color: var(--white);
+		font-size: 0.875rem;
+		@media (min-width: 1300px) {
+			font-size: 1rem;
+		}
+		border-bottom: 1px solid transparent;
+		line-height: 119%;
+		transition: border-color .2s ease-in-out, color .2s ease-in-out;
+		&:hover {
+			color: var(--blue);
+			border-color: var(--blue);
+		}
+		
+		&:active {
+			color: var(--blue-dark);
+			border-color: var(--blue-dark);
+		}
+	}
+}
+
+.anchor-nav {
+
+	// .anchor-nav__list
+
+	&__list {
+		@media (min-width: 1300px) {
+			padding: 0 11px;
+		}
+		margin: -7px 0;
+	}
+
+	// .anchor-nav__item
+
+	&__item {
+		padding-right: 30px;
+	}
+
+	// .anchor-nav__link
+
+	&__link {
+		font-size: 0.875rem;
+		line-height: 171%;
+		display: inline-block;
+		padding: 7px 0;
+		color: #FFFFFF;
+		
+		transition: color .2s ease-in-out;
+		& span {
+			border-bottom: 2px solid transparent;
+			transition: border-color .2s ease-in-out;
+		}
+		&:hover, &._active {
+			color: var(--blue);
+			& span {
+				border-color: var(--blue);
+			}
+		}
+		
+		&:active {
+			color: var(--blue-dark);
+			& span {
+				border-color: var(--blue-dark);
+			}
+		}
+	}
+}
