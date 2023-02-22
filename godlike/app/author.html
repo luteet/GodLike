@@ -1,0 +1,110 @@
+@@include("html/_header.html", {
+	"page_bg": '',
+	"wrapper": ' _grid',
+})
+
+		<main class="main _full-2" data-aos="fade-in" data-aos-delay="400">
+			<div class="page-address">
+				<ul>
+					<li>
+						<a href="#">
+							Home
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Catalog
+						</a>
+					</li>
+					<li>
+						<a>
+							Team Fortress 2 & News
+						</a>
+					</li>
+				</ul>
+			</div>
+			<section class="author">
+				<div class="author__block">
+					<div class="author__block--body">
+						<div class="author__avatar">
+							<picture>
+								<source srcset="img/author/author-avatar.webp" type="image/webp">
+								<img src="img/author/author-avatar.jpg" alt="" width="89" height="89" loading="lazy">
+							</picture>
+						</div>
+						<div class="author__info">
+							<h3 class="author__info--name">
+								Mitchel Smith
+							</h3>
+							<span class="author__info--profession">
+								Managing Director <a href="#">@Shockbyte</a>
+							</span>
+						</div>
+						<div class="author__text">
+							<p>
+								Щоб налаштувати 2FA в ігровій панелі, перейдіть до <a href="#">Безпеки облікового запису</a> в ігровій панелі. <br>
+								Натисніть Увімкнути у розділі «Налаштування двофакторної автентифікації», щоб показати QR-код, який можна відсканувати.
+								Для цього завантажте на свій телефон програму 2FA, наприклад <a href="#">Authy.</a> <br>
+								Та додайте новий обліковий запис і відскануйте QR-код. Після сканування введіть маркер, який у вас є в програмі.
+							</p>
+						</div>
+					</div>
+				</div>
+				<ul class="author__blog-list">
+					@@loop("html/_author-blog-item.html", [
+						{},
+						{},
+						{},
+						{},
+						{},
+					])
+				</ul>
+				<div class="author__footer" data-aos="fade-in">
+					@@include("html/_pagination.html", {
+						"class": "author__pagination ",
+					})
+				</div>
+			</section>
+		</main>
+		<aside class="aside">
+			<div class="aside__wrapper">
+				<div class="aside__block" data-aos="fade-left" data-aos-delay="200">
+					<div class="aside__block--body">
+						<div class="resent-posts">
+							<h3 class="resent-posts__title">
+								Recent posts
+							</h3>
+							<ul class="resent-posts__list">
+								<li class="resent-posts__item">
+									<a href="#" class="resent-posts__link">
+										Barotrauma - Исследуйте загадочный мир
+									</a>
+								</li>
+								<li class="resent-posts__item">
+									<a href="#" class="resent-posts__link">
+										Barotrauma - Исследуйте загадочный мир
+									</a>
+								</li>
+								<li class="resent-posts__item">
+									<a href="#" class="resent-posts__link">
+										Barotrauma - Исследуйте загадочный мир
+									</a>
+								</li>
+								<li class="resent-posts__item">
+									<a href="#" class="resent-posts__link">
+										Barotrauma - Исследуйте загадочный мир
+									</a>
+								</li>
+								<li class="resent-posts__item">
+									<a href="#" class="resent-posts__link">
+										Barotrauma - Исследуйте загадочный мир
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</aside>
+	
+@@include("html/_footer.html")
