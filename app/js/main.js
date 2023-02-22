@@ -36,20 +36,15 @@ body.addEventListener('click', function (event) {
 		let section;
 	
 		if(btnToScroll.classList.contains('_on-top')) {
-			window.scrollTo({
-				left: 0,
-				top: 0,
-				behavior: 'smooth'
-			})
+			body.scrollIntoView({block: "start", behavior: "smooth"});
 		} else {
 			section = document.querySelector(btnToScroll.getAttribute('href'))
-
-			//console.log('scroll')
-			window.scrollTo({
+			section.scrollIntoView({block: "start", behavior: "smooth"});
+			/* window.scroll({
 				left: 0,
-				top: (section) ? section.offsetTop + header.offsetHeight + 5 : 0,
+				top: (section) ? section.offsetTop + 90 : 0,
 				behavior: 'smooth'
-			})
+			}) */
 		}
 	
 	}
@@ -390,7 +385,7 @@ function slideUp (target, duration=500) {
 	  target.style.removeProperty('transition-duration');
 	  target.style.removeProperty('transition-property');
 	}, duration);
-  }
+}
 
 function slideDown (target, duration=500) {
 	target.style.removeProperty('display');

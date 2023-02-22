@@ -218,7 +218,7 @@
 		position: absolute;
 		right: max(var(--container-padding), calc(50% - 700px)); top: 55px;
 		@include _768 {
-			bottom: 55px; bottom: 15px; top: auto;
+			bottom: 55px; bottom: 55px; top: auto;
 		}
 		width: 39px; height: 39px;
 		border-radius: 50%;
