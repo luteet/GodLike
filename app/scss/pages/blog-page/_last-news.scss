@@ -46,6 +46,9 @@
 			&.swiper-button-disabled {
 				opacity: 0;
 			}
+			/* &.swiper-button-next svg {
+				transform: scale(-1);
+			} */
 			transition: opacity .2s ease-in-out;
 
 			background: linear-gradient(267.71deg, #007CEE -37.36%, #5F39CB 98.08%);
@@ -64,7 +67,7 @@
 			& svg {
 				fill: none;
 				stroke: var(--white);
-				width: 18px; height: 18px;
+				width: 9px; height: 15px;
 			}
 		}
 	}

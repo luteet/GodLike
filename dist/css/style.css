@@ -3535,8 +3535,8 @@ body._active,body._popup-active {
 .last-news__slider--arrow svg {
     fill: none;
     stroke: var(--white);
-    width: 18px;
-    height: 18px
+    width: 9px;
+    height: 15px
 }
 
 .last-news__card {

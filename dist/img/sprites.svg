@@ -86,12 +86,12 @@
 		<path d="M0 24H6H18C24.6172 24 30 18.6172 30 12C30 5.38284 24.6172 0 18 0C11.3828 0 6 5.38284 6 12C6 14.698 6.90622 17.3047 8.56249 19.4128C8.24089 20.5364 1.21484 24 0 24Z" fill="#DF4860"/>
 	</symbol>
 
-	<symbol viewBox="0 0 10 16" id="next-arrow">
-		<path d="M1 13.5L7 7.5L0.999999 1.5" stroke="white" stroke-width="2"/>
+	<symbol viewBox="0 0 9 15" id="next-arrow">
+		<path d="M1 13.5L7 7.5L1 1.5" stroke="white" stroke-width="2"/>
 	</symbol>
 
 	<symbol viewBox="0 0 9 15" id="prev-arrow">
-		<path d="M9 15L2 8L9 1" stroke="white" stroke-width="2"/>
+		<path d="M8 1.5L2 7.5L8 13.5" stroke="white" stroke-width="2"/>
 	</symbol>
 
 	<symbol viewBox="0 0 15 8" id="top-arrow">
