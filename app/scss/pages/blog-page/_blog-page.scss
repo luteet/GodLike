@@ -22,11 +22,15 @@
 		@media (min-width: 1300px) {
 			flex-direction: row;
 			align-items: flex-end;
+			flex-wrap: wrap;
 		}
 
 		// .blog-page__header--col
 
 		&--col {
+			&._full {
+				flex: 1 1 100%;
+			}
 		}
 	}
 
@@ -77,6 +81,10 @@
 
 		background: #19192A;
 		border-radius: 4px;
+
+		@media (min-width: 1300px) {
+			margin-top: 0px;
+		}
 
 		// .blog-page__author--avatar
 

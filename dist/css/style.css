@@ -3269,6 +3269,10 @@ body._active,body._popup-active {
     flex-direction: column
 }
 
+.blog-page__header--col._full {
+    flex: 1 1 100%
+}
+
 .blog-page__last-update {
     padding-top: 10px;
     line-height: 150%
@@ -5490,7 +5494,12 @@ body._active,body._popup-active {
 
     .blog-page__header {
         flex-direction: row;
-        align-items: flex-end
+        align-items: flex-end;
+        flex-wrap: wrap
+    }
+
+    .blog-page__author {
+        margin-top: 0
     }
 
     .blog-page__content p {

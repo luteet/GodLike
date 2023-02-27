@@ -280,7 +280,7 @@ let lastNewsSlider = new Swiper('.last-news__slider', {
 	}
 });
 
-if(lastNewsSlider) lastNewsSlider.setProgress(1, 0)
+if(document.querySelector('.last-news__slider') && lastNewsSlider) lastNewsSlider.setProgress(1, 0)
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </slider> -=-=-=-=-=-=-=-=-=-=-=-=
 
