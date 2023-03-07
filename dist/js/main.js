@@ -257,7 +257,6 @@ let lastNewsSlider = new Swiper('.last-news__slider', {
 
 	spaceBetween: 20,
 	slidesPerView: 2,
-	reverseDirection: true,
 
 	navigation: {
 		nextEl: '.swiper-button-next',
